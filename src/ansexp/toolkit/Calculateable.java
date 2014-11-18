@@ -6,6 +6,7 @@
 package ansexp.toolkit;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  *
@@ -28,9 +29,11 @@ public interface Calculateable {
 
     /**
      * Prints result of calculations into the File
+     * @param pattern is pattern *.mac file with <> tags to replace
      * @return File which is ready to be started in ANSYS
+     * @throws java.io.IOException if something goes wrong
      */
-    public File printToFile();
+    public File printToFile(File pattern) throws IOException;
     
     /**
      * Passes the connection to the caller
